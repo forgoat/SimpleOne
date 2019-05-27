@@ -7,4 +7,5 @@ import java.util.List;
 @Mapper
 public interface CourseDao {
     public List<Course> findAll();
+    public List<Course> findByCno(String cno);
 }

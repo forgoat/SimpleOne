@@ -6,4 +6,7 @@
     <select id="findAll" resultType="com.then.entity.Course">
         SELECT * FROM course;
     </select>
+    <select id="findByCno" resultType="com.then.entity.Course" parameterType="string">
+        SELECT * FROM course WHERE cno=#{cno};
+    </select>
 </mapper>

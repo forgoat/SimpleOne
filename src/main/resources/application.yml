@@ -3,8 +3,24 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/demo?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=utf8
     username: root
     password: 12345678
+    #数据库配置包括数据库的url
+    freemarker:
+      template-loader-path: classpath:/templates
+      suffix: .ftl
+      cache: false
+      charset: UTF-8
+      check-template-location: true
+      content-type: text/html
+      expose-request-attributes: true
+      allow-session-override: true
+      request-context-attribute: request
+      mvc:
+        static-path-pattern: /static/**
+      jmx:
+        enabled: false
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true   #开启驼峰命名转换
   type-aliases-package: com.then.entity
+  #mybatis
